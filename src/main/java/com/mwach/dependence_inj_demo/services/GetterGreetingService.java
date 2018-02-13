@@ -3,14 +3,10 @@ package com.mwach.dependence_inj_demo.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService{
-
-
-    public static final String HELLO_MW = "Hello MW - original";
-
+public class GetterGreetingService implements GreetingService{
 
     @Override
     public String sayGreeting() {
-        return HELLO_MW;
+        return "Hello - I was injected by the getter";
     }
 }

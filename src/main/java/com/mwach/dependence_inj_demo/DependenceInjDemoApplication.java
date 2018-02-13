@@ -15,8 +15,8 @@ public class DependenceInjDemoApplication {
 		ApplicationContext ctx = SpringApplication.run(DependenceInjDemoApplication.class, args);
 
 		MyController controller = (MyController) ctx.getBean("myController");
-		controller.hello();
 
+        System.out.println(controller.hello());
 		System.out.println(ctx.getBean(ProperlyInjectedController.class).sayHello());
         System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
